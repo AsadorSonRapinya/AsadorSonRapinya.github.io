@@ -26,7 +26,10 @@ body{font-family:"Nunito",sans-serif;background:var(--cream);color:var(--text)}
 /* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:300;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;transition:all .3s}
 .nav.scrolled{background:rgba(26,26,26,0.97);backdrop-filter:blur(20px)}
-.nav-brand{font-family:"Bangers",cursive;font-size:1.6rem;color:var(--yellow);text-decoration:none;letter-spacing:2px;display:flex;align-items:center;gap:8px}
+.nav-brand{font-family:"Bangers",cursive;font-size:1.6rem;color:var(--yellow);text-decoration:none;letter-spacing:2px;display:flex;align-items:center;gap:8px;flex-shrink:1;min-width:0;overflow:hidden}
+.nav-brand span{font-size:1.2rem;flex-shrink:0}
+.nav-brand-text{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:768px){.nav-brand{font-size:1.1rem}}
 .nav-brand span{font-size:1.2rem}
 .nav-links{display:flex;gap:0.5rem;list-style:none;align-items:center}
 .nav-links a{font-size:0.82rem;font-weight:700;color:rgba(255,255,255,0.7);text-decoration:none;padding:0.45rem 1rem;border-radius:40px;transition:all .2s}
@@ -47,6 +50,7 @@ body{font-family:"Nunito",sans-serif;background:var(--cream);color:var(--text)}
 .hero-overlay2{position:absolute;inset:0;background:linear-gradient(to right,rgba(26,26,26,0.6) 0%,transparent 60%)}
 .hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 2rem 4rem;width:100%}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;font-size:0.7rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;padding:0.5rem 1.2rem;border-radius:40px;margin-bottom:1.5rem}
+@media(max-width:600px){.hero-content{padding:0 1rem 3rem}.hero-badge{font-size:0.58rem;padding:0.4rem 0.9rem;letter-spacing:1px}}
 .hero-h1{font-family:"Bangers",cursive;font-size:clamp(3.5rem,10vw,8rem);line-height:0.9;color:#fff;letter-spacing:3px;margin-bottom:0.8rem}
 .hero-h1 span{color:var(--yellow);display:block}
 .hero-sub{font-size:1.05rem;color:rgba(255,255,255,0.75);line-height:1.6;max-width:480px;margin-bottom:2rem;font-weight:400}
@@ -82,18 +86,18 @@ body{font-family:"Nunito",sans-serif;background:var(--cream);color:var(--text)}
 
 /* ESPECIALIDADES */
 .esp-section{background:var(--cream);padding:6rem 0}
-.esp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.esp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem}
 .esp-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.06);transition:all .3s;border:2px solid transparent}
 .esp-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(255,107,0,0.12);border-color:var(--orange)}
-.esp-img{height:200px;overflow:hidden;position:relative}
+.esp-img{height:240px;overflow:hidden;position:relative}
 .esp-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
 .esp-card:hover .esp-img img{transform:scale(1.06)}
 .esp-badge{position:absolute;top:0.8rem;left:0.8rem;background:var(--orange);color:#fff;font-size:0.58rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:40px}
 .esp-body{padding:1.3rem}
 .esp-name{font-family:"Fredoka One",cursive;font-size:1.3rem;color:var(--text);margin-bottom:0.3rem}
 .esp-desc{font-size:0.78rem;color:var(--muted);line-height:1.5}
-@media(max-width:860px){.esp-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:500px){.esp-grid{grid-template-columns:1fr}}
+@media(max-width:1024px){.esp-grid{grid-template-columns:1fr 1fr}}
+
 
 /* HERO BAND - la propuesta */
 .prop-band{background:var(--dark);padding:5rem 0;position:relative;overflow:hidden}
@@ -200,7 +204,7 @@ footer{background:var(--dark);border-top:2px solid var(--orange);padding:2rem}
 
 <!-- NAV -->
 <nav class="nav" id="mainNav">
-  <a href="#inicio" class="nav-brand"><span>🍗</span> ASADOR SON RAPINYA</a>
+  <a href="#inicio" class="nav-brand"></a>
   <ul class="nav-links">
     <li><a href="#inicio">Inicio</a></li>
     <li><a href="#especialidades">Especialidades</a></li>
@@ -258,7 +262,7 @@ footer{background:var(--dark);border-top:2px solid var(--orange);padding:2rem}
     <div class="esp-grid reveal">
       <div class="esp-card">
         <div class="esp-img">
-          <img src="https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Pollo asado">
+          <img src="https://i.imgur.com/zTmTru2.png" alt="Pollo asado" style="object-position:center center">
           <span class="esp-badge">⭑ Estrella</span>
         </div>
         <div class="esp-body">
@@ -267,8 +271,9 @@ footer{background:var(--dark);border-top:2px solid var(--orange);padding:2rem}
         </div>
       </div>
       <div class="esp-card">
-        <div class="esp-img">
-          <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Comidas caseras">
+        <div class="esp-img" style="display:grid;grid-template-columns:1fr 1fr;gap:2px">
+          <img src="https://i.imgur.com/aY1hhDn.png" alt="Comidas caseras 1" style="width:100%;height:240px;object-fit:cover">
+          <img src="https://i.imgur.com/qiGFpmQ.png" alt="Comidas caseras 2" style="width:100%;height:240px;object-fit:cover">
         </div>
         <div class="esp-body">
           <div class="esp-name">🍲 Comidas Caseras</div>
@@ -277,7 +282,17 @@ footer{background:var(--dark);border-top:2px solid var(--orange);padding:2rem}
       </div>
       <div class="esp-card">
         <div class="esp-img">
-          <img src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Postres">
+          <img src="https://i.imgur.com/VZFzrev.png" alt="Carnes" style="object-position:center center">
+        </div>
+        <div class="esp-body">
+          <div class="esp-name">🥩 Carnes</div>
+          <p class="esp-desc">Selección de carnes a la brasa y a la plancha. Tiernas, jugosas y llenas de sabor. Para los amantes de la carne.</p>
+        </div>
+      </div>
+      <div class="esp-card">
+        <div class="esp-img" style="display:grid;grid-template-columns:1fr 1fr;gap:2px">
+          <img src="https://i.imgur.com/ZGzQtb9.png" alt="Postres 1" style="width:100%;height:240px;object-fit:cover">
+          <img src="https://i.imgur.com/WXM9EGy.png" alt="Postres 2" style="width:100%;height:240px;object-fit:cover">
         </div>
         <div class="esp-body">
           <div class="esp-name">🍮 Postres Caseros</div>
