@@ -53,7 +53,7 @@ body{font-family:"Nunito",sans-serif;background:var(--cream);color:var(--text)}
 @media(max-width:600px){.hero-content{padding:0 1rem 3rem}.hero-badge{font-size:0.58rem;padding:0.4rem 0.9rem;letter-spacing:1px}}
 .hero-h1{font-family:"Bangers",cursive;font-size:clamp(3.5rem,10vw,8rem);line-height:0.9;color:#fff;letter-spacing:3px;margin-bottom:0.8rem}
 .hero-h1 span{color:var(--yellow);display:block}
-.hero-sub{font-size:1.05rem;color:rgba(255,255,255,0.75);line-height:1.6;max-width:480px;margin-bottom:2rem;font-weight:400}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,0.75);line-height:1.6;max-width:480px;margin-bottom:2rem;font-weight:400}@media(max-width:600px){.hero-sub{font-size:0.9rem}}
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem}
 .btn-yellow{background:var(--yellow);color:var(--brown);font-family:"Nunito",sans-serif;font-size:0.85rem;font-weight:800;padding:0.9rem 2rem;border-radius:40px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .2s;border:none;cursor:pointer}
 .btn-yellow:hover{background:#FFE033;transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,214,0,0.4)}
@@ -61,7 +61,7 @@ body{font-family:"Nunito",sans-serif;background:var(--cream);color:var(--text)}
 .btn-outline-y:hover{background:rgba(255,214,0,0.1)}
 .hero-stats{display:flex;gap:2.5rem;flex-wrap:wrap}
 .hstat{border-left:2px solid var(--orange);padding-left:1rem}
-.hstat-n{font-family:"Bangers",cursive;font-size:2rem;color:var(--yellow);line-height:1;letter-spacing:1px}
+.hstat-n{font-family:"Bangers",cursive;font-size:2rem;color:var(--yellow);line-height:1;letter-spacing:1px}@media(max-width:600px){.hstat-n{font-size:1.5rem}}
 .hstat-l{font-size:0.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-top:2px}
 @media(max-width:600px){.hero-content{padding:0 1rem 3rem}.hero-btns{flex-direction:column}.btn-yellow,.btn-outline-y{justify-content:center}.hero-stats{gap:1.5rem}}
 
@@ -96,7 +96,7 @@ body{font-family:"Nunito",sans-serif;background:var(--cream);color:var(--text)}
 .esp-body{padding:1.3rem}
 .esp-name{font-family:"Fredoka One",cursive;font-size:1.3rem;color:var(--text);margin-bottom:0.3rem}
 .esp-desc{font-size:0.78rem;color:var(--muted);line-height:1.5}
-@media(max-width:1024px){.esp-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:1024px){.esp-grid{grid-template-columns:1fr 1fr}}@media(max-width:600px){.esp-grid{grid-template-columns:1fr}}
 
 
 /* HERO BAND - la propuesta */
@@ -125,7 +125,7 @@ body{font-family:"Nunito",sans-serif;background:var(--cream);color:var(--text)}
 .pfeat:hover .pfeat-i{background:var(--orange);color:#fff}
 .pfeat-name{font-weight:800;font-size:0.9rem;color:var(--text);margin-bottom:0.15rem}
 .pfeat-desc{font-size:0.75rem;color:var(--muted);line-height:1.5}
-@media(max-width:768px){.porque-grid{grid-template-columns:1fr;gap:4rem}.porque-img{aspect-ratio:16/9}.porque-float{right:0.5rem;bottom:-1rem}}
+@media(max-width:768px){.porque-grid{grid-template-columns:1fr;gap:2rem}.porque-img{aspect-ratio:16/9}.porque-float{right:0.5rem;bottom:-1rem}}
 
 /* PEDIDO */
 .pedido-section{background:var(--orange);padding:5rem 0;position:relative;overflow:hidden}
@@ -142,11 +142,11 @@ body{font-family:"Nunito",sans-serif;background:var(--cream);color:var(--text)}
 .pc-emoji{font-size:3.5rem;margin-bottom:1rem}
 .pc-title{font-family:"Bangers",cursive;font-size:2rem;color:var(--text);letter-spacing:1px;margin-bottom:0.5rem}
 .pc-sub{font-size:0.85rem;color:var(--muted);margin-bottom:2rem;line-height:1.6}
-.pc-tel{font-family:"Bangers",cursive;font-size:2.2rem;color:var(--orange);letter-spacing:2px;text-decoration:none;display:block;margin-bottom:1.2rem;transition:color .2s}
+.pc-tel{font-family:"Bangers",cursive;font-size:2.2rem;color:var(--orange);letter-spacing:2px;text-decoration:none;display:block;margin-bottom:1.2rem;transition:color .2s}@media(max-width:600px){.pc-tel{font-size:1.8rem}}
 .pc-tel:hover{color:var(--orange2)}
 .pc-wa{background:var(--yellow);color:var(--brown);font-weight:800;font-size:0.88rem;padding:1rem 2rem;border-radius:40px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .2s;width:100%;justify-content:center}
 .pc-wa:hover{background:#FFE033;transform:translateY(-2px)}
-@media(max-width:768px){.pedido-inner{grid-template-columns:1fr;gap:2.5rem}}
+@media(max-width:768px){.pedido-inner{grid-template-columns:1fr;gap:2.5rem}.pi-title{font-size:2.2rem}}
 
 /* CONTACTO */
 .contact-section{background:var(--dark2);padding:5rem 0}
@@ -166,7 +166,7 @@ body{font-family:"Nunito",sans-serif;background:var(--cream);color:var(--text)}
 .h-row span:last-child{color:#fff;font-weight:600}
 .mapa{border-radius:20px;overflow:hidden;height:400px;border:2px solid rgba(255,107,0,0.2)}
 .mapa iframe{width:100%;height:100%;border:0;filter:saturate(0.5) brightness(0.8)}
-@media(max-width:860px){.contact-grid{grid-template-columns:1fr}.mapa{height:260px}}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr}.mapa{height:220px}}@media(max-width:600px){.mapa{height:200px}}
 
 /* FOOTER */
 footer{background:var(--dark);border-top:2px solid var(--orange);padding:2rem}
